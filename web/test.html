@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Similar Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+
+    body, html{
+        margin:0;
+        padding:0;
+        font-family : "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        text-align: center;
+    }
+      .similar-products-container {
+        width: 500px;
+        padding-top: 50px;
+        background-color : #dadee5;
+        float : left;
+        margin-left : 50px;
+        padding : 20px;
+        overflow-y: auto;
+        height: 500px;
+      }
+      .tabs-container {
+        display: table;
+        table-layout: fixed;
+        width : 100%;
+        height : 50px;
+        background-color : #c7ced8;
+
+      }
+
+      .tabs{
+        display: table-cell;
+        text-align: center;
+        padding-top : 15px;
+      }
+
+      .product-details{
+        background-color : #f2f9ff;
+        width : 20%;
+        height : 80%;
+
+         padding : 10px;
+         float : left;
+      }
+
+
+       .result-images {
+         background-color : white;
+         border-radius: 10px;
+         margin : 10px;
+       }
+
+       .result-images-header {
+
+
+        }
+        .result-images-footer {
+
+        }
+
+        .social-website-logo {
+            width : 50px;
+        }
+
+        .product-info {
+            background-color : white;
+            border-radius: 20px;
+        }
+        .menu-icon {
+            float : left;
+            width :30px;
+            height : 5px;
+             margin : 1px;
+        }
+
+        .left {
+            position: absolute;
+            left :0px
+        }
+
+        .assortment-planning-logo{
+            width : 40px;
+            float : left;
+            left-padding : 3px;
+            margin : 5px;
+        }
+
+        .assortment-logo-image {
+            height : 40px;
+            float : left;
+            left-padding : 3px;
+        }
+
+        .header {
+            height : 30px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #008CBA;
+        }
+
+        .right-gap{
+            background-color : #616468;
+            float : right;
+            width : 80%;
+            height : 60px;
+        }
+
+        .whole-gap {
+        height : 40px;
+        width : 100%;
+        }
+
+        .left-gap {
+            float : left;
+            height : 40px;
+            width : 20%
+        }
+
+        .right-blank-gap {
+            width : 80%;
+            float : right;
+            background-color : white;
+        }
+
+        .header-help-icon {
+            float : right;
+            height : 20px;
+            margin : 7px;
+        }
+
+        .header-message-icon {
+            float : right;
+            height : 20px;
+             margin : 7px;
+        }
+
+
+        .breadcrumb {
+            float : left;
+            margin : 10px;
+            }
+
+        .vertical-bar {
+            height : 20px;
+            float : right;
+            margin : 7px;
+         }
+
+
+
+
+
+    </style>
+
+</head>
+<div>
+    <div class="header">
+        <div class="menu-icon">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <img class="menu-icon" src="static/images/home/u20.png">
+            <img class="menu-icon" src="static/images/home/u20.png">
+            <img class="menu-icon" src="static/images/home/u20.png">
+        </div>
+        <div class="assortment-planning-logo">
+            <img class="assortment-logo-image" src="static/images/home/u30.jpg">
+        </div>
+
+        <div class="breadcrumb"> Assortment Planning > Social Sentiment Analysis</div>
+
+        <div><img class="header-help-icon" src="static/images/home/anna_green_u32.png"></div>
+
+        <div> <img class = "vertical-bar" src="static/images/home/u133.png"></div>
+
+        <div><img class="header-help-icon" src="static/images/home/user_awarness_u34.png"></div>
+
+        <div> <img class = "vertical-bar" src="static/images/home/u133.png"></div>
+
+        <div>
+            <img class="header-message-icon" src="static/images/home/u41.png">
+        </div>
+
+        <div> <img class = "vertical-bar" src="static/images/home/u133.png"></div>
+
+        <div>
+            <img class="header-help-icon" src="static/images/home/help_button_u42.png">
+        </div>
+    </div>
+    <div class="tabs-container">
+        <div class="tabs"> DISCOVER</div>
+        <div class="tabs">STRATEGY</div>
+        <div class="tabs">SELECT</div>
+        <div class="tabs"> RANGE</div>
+        <div class="tabs"> BUY</div>
+        <div class="tabs"><a href="#">SOCIAL</a> <br/>
+            <img width="50px" src="static/images/home/u29.png">
+        </div>
+
+    </div>
+</div>
+<div class="whole-gap">
+
+    <div class="left-gap">
+        &nbsp;
+    </div>
+
+</div>
+
+<div class="product-details">
+    <p>
+        <img src="static/uploadedImages/{{ input_file }}">
+    </p>
+    <div class="product-info">
+        <p>
+            CLASS : {{input_label}} <br> <br>
+            ID : ECNU464 <br> <br>
+            PRICE : 3434$ <br> <br>
+            REPLENISHMENT : No <br> <br>
+            PRICE BAND : Better
+
+
+        </p>
+
+    </div>
+
+</div>
+<div class="right-gap">
+    &nbsp;
+</div>
+<div>
+    <div class="right-blank-gap">
+        &nbsp;
+    </div>
+
+    <div class="gap"> &nbsp;</div>
+    <div class="similar-products-container">
+
+        <p>SIMILAR PRODUCTS :</p>
+
+        {% for image_url in similar_list %}
+
+        <div class="result-images">
+            <div class="result-images-header">
+                <div class="social-website-logo"><img src="static/images/home/u337.png"></div>
+                Score 20
+            </div>
+            &nbsp;
+            <img src="static/inputFiles/{{ input_label }}/{{ image_url }}">
+            <div class="result-images-footer"> Comments:</div>
+        </div>
+
+
+        {% endfor %}
+
+
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
