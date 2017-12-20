@@ -1,0 +1,10 @@
+**/*.pyc
+.idea/
+**/*~
+gradle*
+libs/
+local.properties
+android.iml
+.gradle/
+android/assets/*
+.DS_Store
